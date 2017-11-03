@@ -45,8 +45,8 @@ public class Snake extends JFrame implements ActionListener {
 	private void createmenu() {
 		Font font = new Font("微软雅黑", Font.TRUETYPE_FONT, 15);
 		JMenuBar mb = new JMenuBar();
-		String[] menu = { "游戏", "速度", "帮助" };
-		String[][] mi = { { "新游戏", "暂停", "继续" }, { "慢速", "中速", "快速" }, { "关于" } };
+		String[] menu = { "game", "speed", "help" };
+		String[][] mi = { { "new game", "pause", "continue" }, { "slow", "medium", "high" }, { "about" } };
 
 		for (int i = 0; i < menu.length; i++) {
 			JMenu jm = new JMenu(menu[i]);
@@ -56,7 +56,7 @@ public class Snake extends JFrame implements ActionListener {
 				jmi.setFont(font);
 				jm.add(jmi);
 				jmi.addActionListener(this);
-				if (mi[i][j].equals("新游戏"))
+				if (mi[i][j].equals("new game"))
 					neweGame = jmi;
 			}
 			mb.add(jm);
@@ -79,23 +79,23 @@ public class Snake extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		switch (e.getActionCommand()) {
-		case "新游戏":
+		case "new game":
 			controllor.Gamestart();
 			neweGame.setEnabled(false);
 			break;
-		case "快速":
+		case "high":
 			she.speed = She.HIGH;
 			break;
-		case "中速":
+		case "medium":
 			she.speed = She.MIDDLE;
 			break;
-		case "慢速":
+		case "slow":
 			she.speed = She.SLOW;
 			break;
-		case "继续":
+		case "continue":
 			she.pause = false;
 			break;
-		case "暂停":
+		case "pause":
 			she.pause = true;
 			break;
 		default:
