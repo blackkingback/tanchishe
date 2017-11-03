@@ -58,7 +58,7 @@ public class She {
 	}
 
 	public She() {
-		// initSnake();
+		 initSnake();
 	}
 
 	public void initSnake() {
@@ -115,25 +115,25 @@ public class She {
 		Node head = body.getFirst();
 		int x = head.getX();
 		int y = head.getY();
-		if (((x + 20) == food.getX()) && (y == food.getY()) && (direction == RIGHT))// 从左往右
+		if (((x + 20) == food.getX()) && (y == food.getY()) && (direction == RIGHT))
 		{
 			body.addFirst(food);
 			madeFood();
 			Judge = true;
 
-		} else if ((x == food.getX()) && (y == food.getY() + 20) && (direction == UP))// 从下往上
+		} else if ((x == food.getX()) && (y == food.getY() + 20) && (direction == UP))
 		{
 			body.addFirst(food);
 			madeFood();
 			Judge = true;
 
-		} else if (((x - 20) == food.getX()) && (y == food.getY()) && (direction == LEFT))// 从右往左
+		} else if (((x - 20) == food.getX()) && (y == food.getY()) && (direction == LEFT))
 		{
 			body.addFirst(food);
 			madeFood();
 			Judge = true;
 
-		} else if ((x == food.getX()) && ((y + 20) == food.getY()) && (direction == DOWN))// 从上往下
+		} else if ((x == food.getX()) && ((y + 20) == food.getY()) && (direction == DOWN))
 		{
 			body.addFirst(food);
 			madeFood();
@@ -149,21 +149,21 @@ public class She {
 		for(int i=0;i<body.size();i++)
 		{
 			body.get(i);
-			if (((x + 20) == body.get(i).getX()) && (y ==body.get(i).getY()) && (direction == RIGHT))// 从左往右
+			if (((x + 20) == body.get(i).getX()) && (y ==body.get(i).getY()) && (direction == RIGHT))
 			{
 				initSnake();
 
-			} else if ((x ==  body.get(i).getX()) && (y ==  body.get(i).getY() + 20) && (direction == UP))// 从下往上
-			{
-				initSnake();
-
-
-			} else if (((x - 20) ==  body.get(i).getX()) && (y ==  body.get(i).getY()) && (direction == LEFT))// 从右往左
+			} else if ((x ==  body.get(i).getX()) && (y ==  body.get(i).getY() + 20) && (direction == UP))
 			{
 				initSnake();
 
 
-			} else if ((x == body.get(i).getX()) && ((y + 20) == body.get(i).getY()) && (direction == DOWN))// 从上往下
+			} else if (((x - 20) ==  body.get(i).getX()) && (y ==  body.get(i).getY()) && (direction == LEFT))
+			{
+				initSnake();
+
+
+			} else if ((x == body.get(i).getX()) && ((y + 20) == body.get(i).getY()) && (direction == DOWN))
 			{
 				initSnake();
 
