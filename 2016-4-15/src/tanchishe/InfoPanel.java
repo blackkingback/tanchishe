@@ -50,8 +50,8 @@ public class InfoPanel extends JPanel {
 		setSize(200, GamePnel.HEIGHT);
 		setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
 		setBackground(new Color(0xCDCDB4));
-		JLabel l1 = new JLabel("分数");
-		JLabel l2 = new JLabel("速度");
+		JLabel l1 = new JLabel("socre");
+		JLabel l2 = new JLabel("speed");
 		Font ziti = new Font("微软雅黑", Font.TRUETYPE_FONT, 30);
 		l1.setBounds(57, 100, 100, 70);
 		l2.setBounds(57, 200, 70, 70);
