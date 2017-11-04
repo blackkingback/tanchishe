@@ -65,7 +65,7 @@ public class Snake extends JFrame implements ActionListener {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("hello");
+		System.out.println("hello world");
 		SwingUtilities.invokeLater(new Runnable() {
 
 			@Override
