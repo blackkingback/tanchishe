@@ -85,7 +85,7 @@ public class Snake extends JFrame implements ActionListener {
 			neweGame.setEnabled(false);
 			break;
 		case "high":
-			she.speed = She.MEDIUM;
+			she.speed = She.SLOW;
 			break;
 		case "medium":
 			she.speed = She.HIGH;
